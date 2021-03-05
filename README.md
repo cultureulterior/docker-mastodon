@@ -3,7 +3,6 @@
 A GNU Social-compatible microblogging server : https://github.com/tootsuite/mastodon
 
 #### Why this image?
-This image is not the official one. The main difference you can notice is that all processes (web, streaming, sidekiq) are running in a single container, thanks to s6 (a supervision suite). Therefore it's easier to deploy, but not recommended for scaling.
 
 #### Build-time variables
 - **VERSION** : version of Mastodon *(default : latest version)*
