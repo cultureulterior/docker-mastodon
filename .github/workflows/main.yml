@@ -14,5 +14,12 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-west-2
       - name: Deploy static site to S3 bucket
-        run: aws s3 sync ./ s3://cultureulterior-mastodon --delete
+        run: aws s3 sync ./cf.yml s3://cultureulterior-mastodon/cf.yml --delete
+      - name: CF deployment
+        uses: aws-actions/aws-cloudformation-github-deploy@v1
+        with:
+          name: mastodon
+          template: cf.yaml
+
+        
 
