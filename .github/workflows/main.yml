@@ -19,7 +19,7 @@ jobs:
         uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
           name: mastodon
-          template: cf.yaml
+          template: https://cultureulterior-mastodon.s3.us-east-2.amazonaws.com/cf.yml
 
         
 
